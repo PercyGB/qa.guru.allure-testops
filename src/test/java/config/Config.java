@@ -8,17 +8,17 @@ import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import java.sql.SQLOutput;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static config.Credentials.*;
 
 public class Config {
 
     @BeforeAll
     public static void setup() {
-        String login = Credentials.credentials.login();
-        String password = Credentials.credentials.password();
+        String login = credentials.login();
+        String password = credentials.password();
         String remoteUrl = System.getProperty("selenoidUrl");
         String selenoidUrl = String.format("https://%s:%s@%s", login, password, remoteUrl);
 
