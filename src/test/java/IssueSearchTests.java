@@ -1,5 +1,6 @@
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import config.Config;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -16,7 +17,7 @@ import static io.qameta.allure.Allure.step;
 
 
 @Feature("Issue")
-public class IssueSearchTests {
+public class IssueSearchTests extends Config {
 
     private static final String BASE_URL = "https://github.com";
     private static final String REPOSITORY = "eroshenkoam/allure-example";
